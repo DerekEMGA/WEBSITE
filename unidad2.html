@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web DEGA</title>
+    <link rel="shortcut icon" href="img/Icono_arriba.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="nav">
+            <li>  <a href="index.html">Inicio</a></li>
+           <li> <a href="">Portafolio</a>
+           <ul>
+            <li><a href="unidad1.html">Unidad 1</a></li>
+            <li><a href="unidad2.html">Unidad 2</a></li>
+            <li><a href="unidad3.html">Unidad 3</a></li>
+            <li><a href="unidad4.html">Unidad 4</a></li>
+        </ul></li>
+        <li>  <a href="presentaciones.html">Presentaciones</a></li>
+            <li>  <a href="trabajos.html">Trabajos</a></li>
+            
+        </section>
+        <section class="textos-header">
+            <h1>
+                Unidad 2
+            </h1>
+            <h2>
+                Estructura y funcionamiento de la unidad central de procesamiento
+            </h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.83,123.84 343.95,-34.03 500.00,49.98 L500.00,150.00 L-24.54,177.13 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);">
+
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section class="indice" >
+            <div class="ind-box">
+                <p class="ind-titulo" aling="center">Contenido</p>
+                <ul class="Ind-lista">
+                    <li><a href="unidad2html"> 1 </a> </li>
+                    <ul>
+                        <li><a href="#organizacion del procesador">Organizacion del procesador</a></li>
+                        <li><a href="#estructura de registros">Estructura de registros</a></li>
+                        <li><a href="#registros visibles para el usuario">Registros visibles para el usuario</a></li>
+                        <li><a href="#registros de control y de estado">Registros de control y de estado</a></li>
+                        <li><a href="#ejemplos de registros de cpu reales">Ejemplos de registros de CPU reales</a></li>
+                    </ul>
+                    <li><a href="unidad2.html"> 2</a> </li>
+                    <ul>
+                        <li><a href="#el ciclo de instruccion">El ciclo de instruccion</a></li>
+                        <li><a href="#ciclo fetch-decode-execute">Ciclo Fetch-Decode-Execute</a></li>
+                        <li><a href="#segmentacion de instrucciones">Segmentacion de instrucciones</a></li>
+                        <li><a href="#modos de direccionamiento">Modos de direccionamiento</a></li>
+                        <li><a href="#ejemplos de estudio de cpu reales">Ejemplos de estudio de CPU reales</a></li>
+                      
+                    
+                    
+                </ul>
+            </div>
+        </section>
+
+        <section class="contenedor sobre-el-curso">
+            
+            <div class="contenedor-sobre-el-curso">
+             
+                <div class="contenido-textos">
+                 
+                    <h3 id="organizacion del procesador"><span>2.1</span>Organizacion del Procesador</h3>
+                    <p>
+                        La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. Frecuentemente se le llama procesador.
+<br>
+Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa.
+<br>
+Lleva a cabo una gran variedad de:
+<br><br>
+•     Cálculos
+<br><br>
+•     Comparaciones numéricas
+<br><br>
+•     Transferencias de datos como respuesta a las peticiones de los programas que están siendo ejecutados en memoria.
+<br>
+
+La CPU controla las operaciones básicas del ordenador enviando y recibiendo señales de control, direcciones de memoria y datos de un lugar a otro de la computadora a través de un grupo de canales llamados BUS.
+<br>
+La Unidad Central de Proceso está constituida internamente por:
+<br>
+•     La Unidad de Control
+<br><br>
+•     Unidad Aritmético-Lógica
+
+ 
+
+Unidad Aritmético-Lógica (ALU)
+<br>
+
+Recibe los datos sobre los que efectúa operaciones de cálculo y comparaciones. Toma decisiones lógicas (determina si una afirmación es correcta o falsa mediante reglas del algebra de Boole) y devuelve luego el resultado. Todo ello bajo supervisión de la unidad de control.
+
+<br>
+
+La Unidad de Control
+<br>
+La unidad de control le indica al resto del sistema como llevar a cabo las instrucciones de un programa. Comanda las señales electrónicas entre la memoria y la unidad aritmético-lógica, y entre el CPU y los dispositivos de entrada y salida. Para ejecutar cualquier programa, cada comando del mismo se desglosa en instrucciones.
+<br>
+Los procesadores utilizan la segmentación de instrucciones para acelerar la ejecución. La segmentación de cauce se puede dividir en ciclo de instrucción en varias etapas separadas que operan secuencialmente, tales como la captación de instrucción, decodificación de instrucción, cálculo de direcciones de operando, ejecución de instrucción y estructura del operando resultado.
+
+ 
+
+​
+                    </p>
+                    <h3 id="estructura de registros"><span>2.2</span>Estructura de registros</h3>
+                    <p> 
+                        Registros de control y de estado
+                        <br>
+ 
+
+                        Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:
+                        <br>
+                        *Registro de direcciones de memoria (MAR), el cual contiene la dirección en donde se efectuará la próxima lectura o escritura de datos. El numero de direcciones depende del tamaño de la MAR.
+                        <br>
+                       *Registro de datos de memoria (MBR), contiene los datos que van a ser escritos en la memoria o los que fueron leídos en ella.
+                        <br>
+                        *Registro de direcciones de entrada y salida (I/O AR), especifica al dispositivo ya sea de entrada o salida
+                        <br>
+                       *Registro de datos de entrada y salida (I/O BR), es una área temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR.
+                        <br>
+                        *Registro de instrucciones (IR), contiene la dirección de la siguiente instrucción que se va a ejecutar. 
+                        <br>
+                        *Palabras de estado del programa (PSW), contiene códigos de condición junto con otras informaciones de estado como el signo, acarro, desbordamiento, entre otras. 
+
+                    </p>
+                    <h3 id="registros visibles para el usuario"><span>2.2.1</span>Registros visibles para el usuario</h3>
+                    <p>
+                       Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:
+
+ 
+
+Registros de propósito general, son aquellos que pueden guardar tanto datos como direcciones
+
+Registro de datos, que pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos.
+
+Registros de direcciones, contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento.
+
+Códigos de condición, también conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones
+                    </p>
+                    <h3 id="registros de control y de estado"><span>2.2.2</span>Registros de control y de estados</h3>
+                    <p>
+                        Se conoce como registro de estado a los registros de memoria en los 
+                        que se deja constancia de algunas condiciones que se dieron en la última 
+                        operación realizada y que podrán ser tenidas en cuenta en operaciones posteriores. 
+                        Por ejemplo, en el caso de hacer una resta, en el registro de estado queda constancia 
+                        de si el resultado fue cero, positivo o 
+                        negativo, o si se sobrepasó la capacidad de representación.<br><br>
+                        <table class="tabla">
+                            <tr>
+                                   <th scope="col">Registros de control</th>
+                                   <th> funcion </th>
+                            </tr>
+                           <tr>
+                                       <th>
+                                        Caracteristicas
+                                    </th> 
+                                    <td>   Regulan la ejecucion de instrucciones</td>
+                           </tr>
+                           <tr>
+                                   <th>
+                                    Caracteristicas
+                                   </th>
+                                   <td>   Controla que no exista desfases entre operaciones de CPU.</td>
+                            </tr>
+                           <tr>
+                               <th>
+                                Caracteristicas
+                                   </th> 
+                                   <td>   Permiten controlar estados</td>
+                           </tr>
+
+                           </table>
+
+
+                           <table class="tabla">
+                            <tr>
+                                   <th scope="col">Registros de estado </th>
+                                   <th> funcion </th>
+                            </tr>
+                           <tr>
+                                       <th>
+                                       Caracteristicas
+                                    </th> 
+                                    <td>   Estado FLAGS funciona como semaforo entre 9 y 16 bits</td>
+                           </tr>
+                           <tr>
+                                   <th>
+                                    Caracteristicas
+                                   </th>
+                                   <td>  Cada bits individual puede estar activo o inactiva</td>
+                            </tr>
+                           
+
+                           </table>
+
+
+                    </p>
+                    <h3 id="ejemplos de registros de cpu reales"><span>2.2.3</span>Ejemplos de registros de CPU reales</h3>
+                    <p>
+                        Resulta instructivo examinar y comparar las organizaciones de 
+                        registros desistemas análogos. En esta sección, examinamos dos 
+                        microprocesadores de 16bits que fueron diseados aproximadamente 
+                        al mismo tiempo: el Motorola MC68000[STRU79] Y EL INTEL 8086[MORS78]
+                        <br><br>
+                        <img src="paginas/Portafolio/Img_portafolio/Unidad 2/ejemplos de registros de cpu reales.jpg" >
+                        <br><br>
+                        as /iguras 10. 2a3 y 2b3 representan la organización de 
+                        registros de cada uno deellos4 los registros estrictamente 
+                        internos, tales 
+                        como el registro de dirección dememoria, no se muestran
+                        <br>
+                        En la /igura 10. 2c3 se ilustra un segundo aspecto instructivo 
+                        acerca del diseode la organización de los registros. Esta figura 
+                        muestra la organización de losregistros visibles por el usuario en
+                         el intel 80386[ELAY85], un
+                        microprocesador de 32 bits diseñado como una ampliación del 8086
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor sobre-el-curso">
+            
+            <div class="contenedor-sobre-el-curso">
+             
+                <div class="contenido-textos">
+                 
+                    <h3 id="el ciclo de instuccion"><span>2.3</span>El ciclo de instruccion</h3>
+                    <p>
+                        Un ciclo de instrucción 
+                        es el período que tarda el CPU
+                        en ejecutar una instrucción de lenguaje máquina.
+                        Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción 
+                        en un programa. Cada instrucción del juego de instrucciones de una CPU puede requerir diferente número de ciclos 
+                        de instrucción para su ejecución. Un ciclo de instrucción está formado por uno o más ciclos máquina.
+                    </p>
+                    <h3 id="ciclo fetch-decode-execute"><span>2.3.1</span>Ciclo Fetch-Decode-Execute</h3>
+                    <p> 
+                        <table class="tabla">
+                            <tr>
+                                   <th scope="col">Ciclo de Fetch-Decode-Execute</th>
+                                   <th> funcion </th>
+                            </tr>
+                           <tr>
+                                       <th>
+                                        Buscar la isntruccion en la memoria principal
+                                    </th> 
+                                    <td>   •Se vuelca el valor del contador de programa sobre el bus de direcciones. <br>
+                                        • Entonces la CPU pasa la instrucción de la memoria principal a través del bus de datos al Registro de Datos de Memoria (MDR).<br>
+                                        • A continuación el valor del MDR es colocado en el Registro de Instrucción Actual (CIR), un circuito que guarda la instrucción temporalmente de manera que pueda ser decodificada y ejecutada.</td>
+                           </tr>
+                           <tr>
+                                   <th>
+                                    Decodificar la instrucción 
+                                   </th>
+                                   <td>   
+                                    • El decodificador de instrucción interpreta e implementa la instrucción. <br>
+                                    • El registro de instrucción (IR) mantiene la instrucción en curso mientras el contador de programa
+                                     (PC, program counter) guarda la dirección de memoria de la siguiente instrucción a ser ejecutada.<br>
+                                    • Recogida de datos desde la memoria principal <br>
+                                    • También se lee la dirección efectiva de la memoria principal si la instrucción tiene una 
+                                    dirección indirecta, y se recogen los datos requeridos de la memoria principal para ser procesados y colocados en los registros de datos.
+                                   </td>
+                            </tr>
+                           <tr>
+                               <th>
+                                Ejecutar la instrucción 
+
+                                   </th> 
+                                   <td>  
+                                    • A partir del registro de instrucción, los datos que forman la instrucción son decodificados por la unidad de control. <br>
+                                    • Ésta interpreta la información como una secuencia de señales de control que son enviadas a las unidades funcionales relevantes de la CPU para realizar la operación requerida por la instrucción
+
+                                   </td>
+                           </tr>
+                           <tr>
+                            <th>
+                                Almacenar o guardar resultados
+                                </th> 
+                                <td>   
+                                    • El resultado generado por la operación es almacenado en la memoria principal o enviado a un dispositivo de salida dependiendo de la instrucción. <br>
+• Basándose en los resultados de la operación, el contador de programa se incrementa para apuntar a la siguiente instrucción o se actualiza con una dirección diferente donde la próxima instrucción será recogida.
+Ciclo de búsqueda <br>
+• Los pasos 1 y 2 del ciclo de instrucción se conocen como ciclo de búsqueda (fetch). Estos pasos son idénticos en todas las instrucciones. <br>
+• El ciclo de búsqueda procesa la instrucción a partir de la palabra de instrucción, que contiene el código de operación y el operando.
+Ciclo de ejecución. <br>
+Los pasos 3 y 4 del ciclo de instrucción se conocen como ciclo de ejecución. Estos pasos cambiarán con cada tipo de instrucción.
+• El primer paso del ciclo de ejecución es el proceso de memoria, en que los datos se transfieren entre la CPU y el módulo de entrada/salida (I/O). <br>
+• A continuación se produce el proceso de datos, que usa operaciones matemáticas así como operaciones lógicas en referencia a los datos. <br>
+• Después tiene lugar el paso de alteraciones centrales, que son una secuencia de operaciones, por ejemplo una operación de salto. El último paso es una operación combinada de todos los otros pasos.
+
+
+                                </td>
+                        </tr>
+
+
+                           </table>
+
+                    </p>
+                    <h3 id="segmentacion de instrucciones"><span>2.3.2</span>Segmentacion de instrucciones</h3>
+                    <p>
+                        Es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador.
+                         La segmentación intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las
+                          instrucciones en una serie de pasos secuenciales que efectuarán distintas unidades de la CPU, tratando 
+                          en paralelo diferentes partes de las instrucciones. Permite una mayor tasa de transferencia efectiva por 
+                          parte de la CPU que la que sería posible a una determinada 
+                        frecuencia de reloj, pero puede aumentar la latencia debido al trabajo adicional que supone el propio proceso de la segmentación.
+
+                    </p>
+                    <h3 id="conjunto de instrucciones caracteristicas y funciones"><span>2.3.3</span>Conjunto de instrucciones.Caracteristicas y funciones</h3>
+                    <p>
+                     El conjunto de instrucciones de un computador debe ser completo en el sentido de que se pueda construir un programa para evaluar una función
+                      computable usando una cantidad de memoria razonable y empleando un tiempo moderado, es decir, el número de instrucciones de ese programa no 
+                      debe ser demasiado elevado. Los juegos de instrucciones también tienen que ser eficientes, esto significa que las funciones más necesarias deben
+                       poder realizarse usando pocas instrucciones. El conjunto de instrucciones de una máquina debe ser regular, es decir debe ser simétrico 
+                        y ortogonal, es decir, deben poder
+                         combinarse, en la medida de lo posible, todos las operaciones con todos los tipos de datos y modos de direccionamiento. 
+                        En muchas ocasiones, también se le debe exigir a un computador que su juego de instrucciones sea compatible con modelos anteriores.
+                    </p>
+                    <h3 id="modos de direccionamiento"><span>2.3.4</span>Modos de direccionamiento</h3>
+                    <p>
+                        Son las diferentes maneras de especificar un operando dentro de una instrucción. Un modo de direccionamiento especifica la forma de calcular la dirección de 
+                        memoria efectiva de un operando mediante el uso de la información contenida en registros dentro de una instrucción de la máquina.<br><br>
+
+                        <strong>Direccionamiento implícito</strong>
+Depende solamente de la instrucción, es decir, la instrucción no lleva parámetros.
+Particularmente en instrucciones que no accesan memoria, o bien que tienen una forma específica de accesarla.
+<br><br>
+Modo registro</strong><br>
+Usa solamente registros como operandos<br>
+Es el más rápido, pues minimiza los recursos necesarios (toda la información fluye dentro del EU del CPU)<br>
+
+<strong>Modo inmediato</strong><br>
+Tiene dos operandos: un registro y una constante que se usa por su valor.<br>
+El valor constante no se tiene que buscar en memoria, pues ya se obtuvo al hacer el “fetch” de la instrucción.<br>
+
+<strong>Modo directo</strong><br>
+Uno de los operandos involucra una localidad específica de memoria<br>
+El valor constante se tiene que buscar en memoria, en la localidad especificada.<br>
+Es más lento que los anteriores, pero es el más rápido para ir a memoria, pues ya “sabe” la localidad, la toma de la instrucción y no la tiene que calcular.<br>
+
+Estas dos instrucciones serían equivalentes, si Variable está, por ejemplo, en la localidad 0 de memoria. 
+En la forma primitiva del lenguaje de máquina, como el primer ejemplo, se tiene que indicar “mover a AH el 
+contenido (indicado por los corchetes), de la localidad 0 de los datos (lo de los datos es implícito). El lenguaje 
+Ensamblador, sin embargo, nos permite la abstracción del uso de variables, pero como una variable tiene una localidad 
+determinada en memoria, para el procesador funciona igual. La única diferencia consiste en que el programador no tiene 
+que preocuparse por la dirección, ese manejo lo hace automáticamente el Ensamblador.<br>
+<strong>Modo indirecto</strong><br>
+Se usan los registros SI, DI como apuntadores<br>
+El operando indica una localidad de memoria, cuya dirección (sólo la parte desplazamiento) está en SI o DI.<br>
+Es más lento que los anteriores, pues tiene que “calcular” la localidad<br>
+ 
+<strong>Modo indexado de base</strong><br>
+Formato:<br>
+[<br>
+BX o BP<br>
++ SI o DI (opcionales)<br>
++ constante (opcional)<br>
+]<br>
+BX o BP indica una localidad base de la memoria<br>
+A partir de BX o BP, se puede tener un desplazamiento variable y uno constante<br>
+La diferencia es el segmento sobre el que trabajan por defecto:<br>
+BX por defecto en el segmento de datos<br>
+BP por defecto en el segmento de pila.<br>
+
+
+                    </p>
+                    <h3 id="ejemplos de estudio de cpu reales"><span>2.3.4</span>Casos de estudio de CPU reales</h3>
+                    <p>
+                    Casos de estudio de CPU reales.<br>
+I-8086: Los registros del procesador, se usan para contener los datos con que se está trabajando puesto que el acceso a los registros
+ es mucho más rápido que los accesos a memoria. Se pueden realizar operaciones aritméticas y lógicas, comparaciones, entre otras. 
+Los modos del 8086 son indirectos por registro, indexados o directos por registro.<br><br>
+Motorola 68000: El mismo direccionamiento lleva implícito el tipo de registro sobre el que trabaja (direcciones o datos). 
+Está basado en dos bancos de 8 registros de 32 bits. Un banco es de datos (Dn) y el otro de punteros (An). Además contiene 
+un contador de programa de 32 bits y un registro de estado de 16 bits.<br><br>
+80386: Para este microprocesador existe un modo nuevo que requiere un byte adicional denominado SIB (escala, índice, base) 
+que se añade al byte de operandos, es útil para direccionar elementos de vectores de longitudes diferentes en bucles. Es 
+una alternativa a los modos autoindexados que esta máquina no soporta.<br><br>
+Procesador I3 Línea de microprocesadores Intel, gama baja. 3 era generación 2010. Características: Procesador de 2 núcleos 
+4 hilos de procesamiento en paralelo Tarjeta gráfica integrada Controlador de memoria Controlador PCI Express 2.0 integrado
+
+
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        
+
+        
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>8442323069</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo</h4>
+                <p>gonzalezaguila.derek@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Instituto</h4>
+                <p>Instituto tecnologico de saltillo</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Derek Emir Gonzalez Aguilar | Sistemas Computacionales</h2>
+    </footer>
+</body>
+</html>
