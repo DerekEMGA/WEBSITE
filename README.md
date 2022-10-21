@@ -1,2 +1,2 @@
-#1
+# 1
 Proyecto Arquitectura de computadoras
